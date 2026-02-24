@@ -1,17 +1,78 @@
-# guard_app
+# Mini Guard Booking & Live Tracking System
 
-A new Flutter project.
+A real-time Guard Booking and Live Tracking system built using Flutter, Firebase, and BLoC Architecture.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 📌 Overview
 
-A few resources to get you started if this is your first Flutter project:
+This system consists of two separate applications:
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- 🛡 Guard App  
+- 👤 Customer App  
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Both apps use the same Firebase backend.
+
+Guards can go online and share live location.  
+Customers can book nearby guards and track them in real time using Google Maps.
+
+---
+
+## 🔐 Authentication
+
+- Firebase Phone OTP Login
+- After login:
+  - Guard → Guard Home
+  - Customer → Customer Home
+
+---
+
+## 🛡 Guard App Features
+
+- Profile setup (Name)
+- Online / Offline availability toggle
+- Background location updates (every 5–10 seconds)
+- Location stored in Firestore
+- Receive push notifications for bookings
+- Accept / Reject booking
+- Live tracking after accepting ride
+- Stop tracking after ride completion
+
+---
+
+## 👤 Customer App Features
+
+- Fetch nearby guards
+- Sort guards by nearest distance
+- Book guard with selected date & time
+- Ride document created in Firestore
+- Push notification when guard accepts
+- Live tracking using Google Maps
+- Stop tracking when ride is completed
+
+---
+
+## 🏗 Architecture
+
+- BLoC Architecture
+- Clean separation of UI & Business Logic
+- Proper state handling (Loading, Success, Error)
+- Firestore for real-time updates
+- Firebase Cloud Messaging (FCM)
+- Google Maps Integration
+
+---
+
+## 🛠 Tech Stack
+
+- Flutter
+- Firebase Authentication (Phone OTP)
+- Cloud Firestore
+- Firebase Cloud Messaging
+- Google Maps API
+- Geolocator
+- BLoC
+
+---
+
+## 📂 Project Structure
